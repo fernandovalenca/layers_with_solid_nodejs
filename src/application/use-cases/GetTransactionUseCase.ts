@@ -1,4 +1,4 @@
-import { TransactionRepository } from "../../domain/repository/TransactionRepository";
+import { TransactionRepository } from "../../application/repositories/TransactionRepository";
 
 export class GetTransactionUseCase {
   constructor(private transactionRepository: TransactionRepository) {}

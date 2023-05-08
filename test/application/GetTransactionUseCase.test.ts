@@ -1,6 +1,6 @@
-import { CreateTransactionUseCase } from "../src/application/use-cases/CreateTransactionUseCase";
-import { GetTransactionUseCase } from "../src/application/use-cases/GetTransactionUseCase";
-import { TransactionMemoryRepository } from "../src/infra/repository/TransactionMemoryRepository";
+import { CreateTransactionUseCase } from "../../src/application/use-cases/CreateTransactionUseCase";
+import { GetTransactionUseCase } from "../../src/application/use-cases/GetTransactionUseCase";
+import { TransactionMemoryRepository } from "../../src/infra/repositories/TransactionMemoryRepository";
 
 describe("GetTransactionUseCase", () => {
   test("Deve carregar os dados de uma transaction", async () => {

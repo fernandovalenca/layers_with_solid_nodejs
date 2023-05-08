@@ -1,5 +1,5 @@
-import { CreateTransactionUseCase } from "../src/application/use-cases/CreateTransactionUseCase";
-import { TransactionMemoryRepository } from "../src/infra/repository/TransactionMemoryRepository";
+import { CreateTransactionUseCase } from "../../src/application/use-cases/CreateTransactionUseCase";
+import { TransactionMemoryRepository } from "../../src/infra/repositories/TransactionMemoryRepository";
 
 describe("CreateTransactionUseCase", () => {
   test("Deve criar um transaction", async () => {

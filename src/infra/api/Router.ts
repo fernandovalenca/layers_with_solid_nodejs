@@ -1,7 +1,7 @@
 import { CreateTransactionUseCase } from "../../application/use-cases/CreateTransactionUseCase";
 import { GetTransactionUseCase } from "../../application/use-cases/GetTransactionUseCase";
 import { HttpServer } from "../protocols/HttpServer";
-import { TransactionRepository } from "../../domain/repository/TransactionRepository";
+import { TransactionRepository } from "../../application/repositories/TransactionRepository";
 
 export class Router {
   constructor(

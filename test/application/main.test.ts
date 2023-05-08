@@ -2,7 +2,6 @@ import axios from "axios";
 
 describe("Teste de integração", () => {
   const code = Math.floor(Math.random() * 100);
-
   test("Deve criar uma transação", async () => {
     await axios({
       url: "http://localhost:3000/transactions",
