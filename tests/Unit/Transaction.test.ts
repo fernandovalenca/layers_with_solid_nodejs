@@ -1,11 +1,11 @@
-import { Transaction } from "../../src/domain/entities/Transaction";
+import { Transaction } from '../../src/domain/entities/Transaction';
 
-describe("Transaction", () => {
-  test("Deve criar uma transaction com os parâmetros corretos", () => {
+describe('Transaction', () => {
+  test('Deve criar uma transaction com os parâmetros corretos', () => {
     const input = {
       code: 1,
       amount: 1000,
-      paymentMethod: "credit_card",
+      paymentMethod: 'credit_card',
       numberInstallments: 3,
     };
     const transaction = new Transaction(
@@ -21,9 +21,14 @@ describe("Transaction", () => {
     expect(transaction.numberInstallments).toEqual(input.numberInstallments);
 
     transaction.generateInstallments();
+    const total = transaction.installments.reduce(
+      (acc, installment) => acc + installment.amount,
+      0
+    );
 
     expect(transaction.installments.length).toBe(3);
-    expect(transaction.installments[0].amount).toBe(333.33)
-    expect(transaction.installments[2].amount).toBe(333.34)
+    expect(transaction.installments[0].amount).toBe(333.33);
+    expect(transaction.installments[2].amount).toBe(333.34);
+    expect(total).toBe(input.amount);
   });
 });
